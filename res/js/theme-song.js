@@ -13,7 +13,6 @@ if (params.id)
     console.log(themeSong)
     themeSongContainer = document.createElement('div')
     themeSongContainer.className = 'theme-song'
-    themeSongContainer.style
     themeSongContainer.innerHTML = `<a href="${themeSong.page_url}"><img src="${themeSong.thumbnail_url}"></a><br><a href="${themeSong.page_url}"><strong>${themeSong.title}</strong></a><br>${themeSong.artist}`
     themeSongScript.parentNode.insertBefore(themeSongContainer, themeSongScript)
   })
