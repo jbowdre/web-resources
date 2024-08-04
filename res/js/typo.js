@@ -159,9 +159,3 @@ async function typo(element, text) {
 
   return new Promise(resolve => setTimeout(resolve, 1));
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  var element = document.getElementById('tagline');
-  var text = element.innerHTML;
-  typo(element, text);
-});
