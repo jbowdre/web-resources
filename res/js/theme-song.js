@@ -1,4 +1,4 @@
-// retreives the latest link from a musicthread thread and displays it on the page
+// retrieves the latest link from a musicthread thread and displays it on the page
 const themeSongScript = document.currentScript
 const urlParams = new URLSearchParams(themeSongScript.src.split('.js')[1])
 const params = Object.fromEntries(urlParams.entries())
