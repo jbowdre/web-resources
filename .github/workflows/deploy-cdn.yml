@@ -18,6 +18,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: replace js and css files with minified ones
+        uses: nizarmah/auto-minify@v3
+        with:
+          overwrite: true
       - name: Push to Bunny Storage
         uses: ayeressian/bunnycdn-storage-deploy@v2.2.2
         with:
