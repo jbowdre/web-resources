@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Push to Bunny Storage
-        uses: ayeressian/bunnycdn-storage-deploy@v2
+        uses: ayeressian/bunnycdn-storage-deploy@v2.2.2
         with:
           source: res
           destination: /
