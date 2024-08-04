@@ -1,0 +1,33 @@
+name: Deploy Resources to CDN
+
+# only run on changes to main
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+concurrency: # prevent concurrent deploys doing strange things
+  group: deploy-cdn
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy to Bunny CDN
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Push to Bunny Storage
+        uses: ayeressian/bunnycdn-storage-deploy@v2
+        with:
+          source: res
+          destination: /
+          storageZoneName: "${{ secrets.BUNNY_STORAGE_NAME }}"
+          storagePassword: "${{ secrets.BUNNY_STORAGE_PASSWORD }}"
+          storageEndpoint: "${{ secrets.BUNNY_STORAGE_ENDPOINT }}"
+          accessKey: "${{ secrets.BUNNY_API_KEY }}"
+          pullZoneId: "${{ secrets.BUNNY_ZONE_ID }}"
+          upload: "true"
+          remove: "true"
+          purgePullZone: "true"
