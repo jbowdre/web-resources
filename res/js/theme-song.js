@@ -23,7 +23,7 @@ if (params.id)
     if (plain) {
       innerHTML = `<a href="${themeSong.page_url}">${themeSong.title}</a> by ${themeSong.artist}`
     } else {
-      innerHTML = `<a href="${themeSong.page_url}"><img src="${themeSong.thumbnail_url}"></a><br><a href="${themeSong.page_url}"><strong>${themeSong.title}</strong></a><br>${themeSong.artist}`
+      innerHTML = `<a href="${themeSong.page_url}"><img src="${themeSong.thumbnail_url}" alt="Album art for ${themeSong.title} by ${themeSong.artist}"></a><br><a href="${themeSong.page_url}"><strong>${themeSong.title}</strong></a><br>${themeSong.artist}`
     }
 
     themeSongContainer.innerHTML = innerHTML
