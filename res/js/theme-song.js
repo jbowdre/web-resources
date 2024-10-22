@@ -13,7 +13,7 @@ if (params.id)
   fetch(musicthread)
   .then((response) => response.json())
   .then((thread) => {
-    let themeSong = thread.links[0]
+    let themeSong = thread.links[thread.links.length - 1]
     console.log(themeSong)
     themeSongContainer = document.createElement('div')
     themeSongContainer.className = 'theme-song'
