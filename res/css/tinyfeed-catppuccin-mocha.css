@@ -1,0 +1,98 @@
+:root {
+  /* Catppuccin Mocha palette */
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #313244;
+  --overlay0: #6c7086;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --sapphire: #74c7ec;
+  --sky: #89dceb;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+}
+
+body {
+  background-color: var(--base);
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  color: var(--mauve);
+  border-bottom: 2px solid var(--surface1);
+  padding-bottom: 0.5rem;
+}
+
+h2, h3, h4, h5, h6 {
+  color: var(--lavender);
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--sky);
+  text-decoration: underline;
+}
+
+/* Feed list styling */
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: var(--surface0);
+  transition: background-color 0.2s ease;
+}
+
+li:hover {
+  background-color: var(--surface1);
+}
+
+/* Date styling */
+time {
+  color: var(--subtext0);
+  font-size: 0.9rem;
+}
+
+/* Source domain styling */
+a[href^="http"] {
+  color: var(--pink);
+}
+
+/* Feed aggregation section */
+p:last-of-type {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--surface1);
+  color: var(--subtext1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  li {
+    padding: 0.25rem;
+  }
+}
