@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   const hasWeather = document.getElementById('conditions');
   if (hasWeather) {
-    const wx_endpoint = 'https://paste.jbowdre.lol/tempest.json/raw';
+    const wx_endpoint = 'https://paste.jwq.lol/tempest.json/raw';
     // get ready to calculate relative time
     const units = {
       year  : 24 * 60 * 60 * 1000 * 365,
